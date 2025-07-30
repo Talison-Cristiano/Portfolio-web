@@ -11,10 +11,11 @@ body {
 }
 
 header {
-    background: #4a90e2;
+    position: relative; 
+    background-color: #0077cc;
     color: white;
+    padding: 20px;
     text-align: center;
-    padding: 2rem;
 }
 
 header h1 {
@@ -122,4 +123,29 @@ footer {
     background: #4a90e2;
     color: white;
     margin-top: 2rem;
+}
+
+#language-switcher {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+#language-switcher .flag {
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+#language-switcher .flag:hover {
+    transform: scale(1.1);
+}
+
+
+.lang {
+    margin: 20px;
 }
