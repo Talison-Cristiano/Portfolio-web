@@ -10,31 +10,60 @@ body {
     color: #333;
 }
 
+/* Header fixo e destacado */
 header {
-    position: relative; 
+    position: sticky;
+    top: 0;
     background-color: #0077cc;
     color: white;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+    z-index: 100;
 }
 
 header h1 {
     margin: 0;
 }
 
+/* Container centralizado */
 .container {
     max-width: 1000px;
     margin: auto;
-    padding: 2rem;
+    padding: 2rem 1rem;
 }
 
+/* Seções com fundo alternado e sombra leve */
+section {
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 12px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+/* Alternar fundo para seções pares */
+section:nth-of-type(even) {
+    background: #e9f0fb;
+}
+
+/* Pequeno efeito hover nas seções */
+section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Sobre - layout flex e responsivo */
 .sobre {
     display: flex;
     align-items: center;
     gap: 1.5rem;
+    flex-wrap: wrap;
     margin-bottom: 2rem;
 }
 
+/* Avatar */
 .avatar {
     width: 120px;
     height: 120px;
@@ -43,10 +72,7 @@ header h1 {
     object-fit: cover;
 }
 
-section{
-    margin-bottom: 2rem;
-}
-
+/* Parágrafos das seções */
 section p {
     font-size: 1.1rem;
     margin-bottom: 0.7rem;
@@ -55,11 +81,13 @@ section p {
     gap: 0.5rem;
 }
 
+/* Ícones dentro dos parágrafos */
 section p i {
     color: #4a90e2;
     font-size: 1.5rem;
 }
 
+/* Links */
 section a {
     font-weight: bold;
     color: #4a90e2;
@@ -71,6 +99,7 @@ section a:hover {
     text-decoration: underline;
 }
 
+/* Texto e links inline em estudos */
 .estudos p {
     display: inline-block;
     line-height: 1.6;
@@ -91,32 +120,44 @@ section a:hover {
     text-decoration: underline;
 }
 
-
-
+/* Projetos - grid responsivo com gap */
 .projetos {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
 }
 
+/* Card do projeto com sombra e transição */
 .projeto {
     background: white;
     padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.07);
     flex: 1 1 calc(33% - 1rem);
     min-width: 250px;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.projeto:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    transform: translateY(-6px);
 }
 
 .projeto h3 {
     margin-top: 0;
 }
+
 .projeto a {
     color: #4a90e2;
     text-decoration: none;
     font-weight: bold;
 }
 
+.projeto a:hover {
+    text-decoration: underline;
+}
+
+/* Footer com padding e cor */
 footer {
     text-align: center;
     padding: 1rem;
@@ -125,6 +166,7 @@ footer {
     margin-top: 2rem;
 }
 
+/* Switcher de idioma estilizado */
 #language-switcher {
     margin-top: 10px;
     display: flex;
@@ -145,7 +187,7 @@ footer {
     transform: scale(1.1);
 }
 
-
+/* Margem do container principal */
 .lang {
     margin: 20px;
 }
